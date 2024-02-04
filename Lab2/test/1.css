@@ -1,0 +1,6 @@
+#photo {
+    position: absolute;
+    top: 50%; /* Position the photo vertically in the middle */
+    left: 20px; /* Position the photo 20px from the left side */
+    transform: translateY(-50%); /* Center the photo vertically */
+}
