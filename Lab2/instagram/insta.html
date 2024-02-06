@@ -104,12 +104,27 @@
             text-decoration: underline;
         }
 
+        #photo {
+            position: absolute;
+            top: 50%;
+            left: 20px; 
+            transform: translate(50%, -50%);
+            transition: width 0.5s, height 0.5s;
+            height: 76%;
+            margin-left: 288px;
+            width: 21%;
+        }
+
+        #instagram{
+            margin-top: 46px;
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="content">
-            <img src="instaphoto.jpg">
+            <img id="instagram" src="instaphoto.jpg">
+            <img id="photo" src="photo1">
             <div class="registration-box" style="display: flex; flex-direction: column;">
                 <div class="box box1"> 
                     <img src="https://www.vectorlogo.zone/logos/instagram/instagram-wordmark.svg">
@@ -156,5 +171,6 @@
         <br><br>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
