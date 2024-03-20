@@ -4,6 +4,8 @@ import { Album } from '../models';
 import { AlbumsService } from '../albums.service';
 import { CommonModule, NgFor } from '@angular/common';
 import { FormsModule, NgModel } from '@angular/forms';
+import { take } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-albums',
@@ -35,7 +37,7 @@ export class AlbumsComponent implements OnInit{
 
   getAlbums(){
     this.albumService.getAlbums().subscribe((albums) => {
-      this.albums = albums;
+      this.albums = albums.slice(0,5);
       this.loaded = true;
     })
   }
